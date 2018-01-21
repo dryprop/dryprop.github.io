@@ -27,6 +27,7 @@
 
         <!--gallery wrap-->
                     <div class="row mb-40">
+                        {% if page.infofield %}
                             <div class="col-sm-4 left-block ppt-info">
                                 <div class="box border">
                                     <div class="box-title">
@@ -43,14 +44,16 @@
                                     </div>
                                 </div>
                             </div>
+                            {% endif %}
                             <!--property-desc-->
-
+                            {% if page.description %}
                             <div class="col-sm-8 ppt-desc">
                                 <div class="box border content-wrap mb-0">
                                     <h4 class="title mb-20">Property Description</h4>
                                     {{page.description}}
                                 </div>
                             </div>
+                            {% endif %}
                             <!--property-desc-->
                         </div>
                         <!--property detail-->
