@@ -2114,6 +2114,9 @@ main {
     height: 700px;
     /* height: 60vh; */
     background-image: url('./assets/images/slider0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
     position: relative;
 }
