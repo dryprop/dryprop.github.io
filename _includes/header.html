@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" dir="ltr">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+
+    {% if page.title %}
+    <title>{{ page.title | markdownify | strip_html | strip_newlines }}</title>
+    {% endif %}
+
+    <meta name="description" content="We have been providing quality housing at an affordable price in the UT Main Campus and UTMC areas since 2000.  Our property portfolio ranges from townhouses to duplexes to single family homes.  All of our homes have been recently updated with paint and appliances and feature amenities such as alarm systems, 24/7 on-call maintenance, weekly lawn care, and garages and off-street parking.">
+
+    <!--===== FB OG ======-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:title" content="Dryfuse Campus Properties">
+    <meta property="og:image" content="{{ site.url }}/assets/images/properties/house2/front.jpg">
+    <meta property="og:description" content="University of Toledo Off-Campus Housing">
+    <meta property="og:site_name" content="Dryfuse Campus Properties">
+    <meta property="og:locale" content="en_US">
+    <!-- Next tags are optional but recommended -->
+    <meta property="og:image:width" content="1140">
+    <meta property="og:image:height" content="760">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+
+    <!-- CSS LIBRARY -->
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/font.css" />
+
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/swiper.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/responsive.css" />
+
+    <!-- color skin -->
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/color-skin/default.css" />
+
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <header class="style2">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="{{site.url}}">
+                        <img src="{{ site.url }}/assets/images/logowhite2.png" alt="" class="logo1">
+                        <img src="{{ site.url }}/assets/images/logocolor2.png" alt="" class="logo2">
+                    </a>
+                </div>
+                <!-- button -->
+
+                {% include menu.html %}
+
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!--header-->

@@ -1,0 +1,52 @@
+---
+layout: default
+title: Featured Properties
+permalink: /properties/
+show: false
+---
+
+<div class="sec-pad pb-0">
+<section class="featured-block sec-pad-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="main-title text-center gold">
+                    <h2>Housing Options to Suit Your Needs</h2>
+                    <p>
+                        Dryfuse Campus Properties rents houses, condos, and duplexes, which means there is something for everyone. For a full list of amenities and property information, click on a property below.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--title-->
+        <!-- Featured Properties Large (2x2) -->
+        <div class="row">
+            {% for property in site.properties %}
+              {% if property.featured == true  %}
+                <div class="col-md-6 col-sm-6">
+                    <div class="featured-wrap mb-30">
+                        <a href="{{site.baseurl}}{{ property.url }}" class="link-overlay"></a>
+                        <span class="tag right text-uppercase bg-notice">featured</span>
+
+                        <div class="content-wrap mb-0 text-white">
+                            <div class="title-wrap">
+                                <h4 class="mb-0 text-white">{{ property.name }}</h4>
+                                <span>{{ property.location }}</span>
+                            </div>
+                            <div class="price-tag price">
+                                {{ property.price }}
+                            </div>
+                        </div>
+
+                        <figure class="image-effect overlay">
+                            <img src="{{ site.url }}/assets/images/properties/{{ property.previmg }}" alt="{{ property.name }} Facade">
+                        </figure>
+                        <!--fig-->
+                    </div>
+                </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+    </div>
+</section>
+</div>

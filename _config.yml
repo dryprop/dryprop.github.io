@@ -1,0 +1,4 @@
+collections:
+  properties:
+    output: true
+    permalink: /properties/:path/

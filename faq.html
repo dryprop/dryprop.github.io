@@ -1,0 +1,145 @@
+---
+layout: default
+title: Frequently Asked Questions
+---
+
+<main class="pri-pad page-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+
+              <h1 id="security">Property Information</h1>
+
+              <div class="tab-accordion-area sec-pad-b ">
+              <div class="container">
+              <div class="row">
+                  <div class="col-xs-12">
+                      <div class="tab-content fix">
+                          <div class="tab-pane active" id="preview">
+                              <div class="panel-group" id="accordion">
+                                <!-- start single accordion -->
+                                {% for property in site.data.faq.property %}
+                                {% if site.data.faq.property %}
+                                  <div class="panel single-accordion">
+                                      <a href="#accordion-4{{forloop.index}}" data-parent="#accordion" data-toggle="collapse" class="accordion-head">{{property.question}}</a>
+                                      <div class="collapse" id="accordion-4{{forloop.index}}">
+                                          <div class="accordion-body fix">
+                                              <p>{{property.answer | markdownify }}</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  {%endif%}
+                                  {% endfor %}
+                                  <!-- End Single Accordion -->
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- end accordion section -->
+
+              <h1 id="deposit">Deposit Information</h1>
+
+              <div class="tab-accordion-area sec-pad-b">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <div class="tab-content fix">
+                                  <div class="tab-pane active" id="preview">
+                                      <div class="panel-group" id="accordion">
+                                        <!-- start single accordion -->
+                                        {% for deposits in site.data.faq.deposits %}
+                                        {% if site.data.faq.deposits %}
+                                          <div class="panel single-accordion">
+                                              <a href="#accordion-2{{forloop.index}}" data-parent="#accordion" data-toggle="collapse" class="accordion-head">{{deposits.question}}</a>
+                                              <div class="collapse" id="accordion-2{{forloop.index}}">
+                                                  <div class="accordion-body fix">
+                                                      <p>{{deposits.answer | markdownify }}</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          {%endif%}
+                                          {%endfor%}
+
+                                          <!-- End Single Accordion -->
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+          <!-- end accordion section -->
+
+                <h1 id="utilities">Utility Information</h1>
+                <p> Tenants are required to pay for the gas and electricity utilities for the duration of their lease. </p>
+                <br>
+                  <div class="tab-accordion-area sec-pad-b">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="tab-content fix">
+                                      <div class="tab-pane active" id="preview">
+                                          <div class="panel-group" id="accordion">
+                                            <!-- start single accordion -->
+                                            {% for utilities in site.data.faq.utilities %}
+                                            {% if site.data.faq.utilities %}
+                                              <div class="panel single-accordion">
+                                                  <a href="#accordion-{{forloop.index}}" data-parent="#accordion" data-toggle="collapse" class="accordion-head">{{utilities.question}}</a>
+                                                  <div class="collapse" id="accordion-{{forloop.index}}">
+                                                      <div class="accordion-body fix">
+                                                          <p>{{utilities.answer | markdownify }}</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              {%endif%}
+                                              {%endfor%}
+                                              <!-- End Single Accordion -->
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end accordion section -->
+
+                    <h1 id="location">Location Information</h1>
+
+                    <div class="tab-accordion-area sec-pad-b">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="tab-content fix">
+                                        <div class="tab-pane active" id="preview">
+                                            <div class="panel-group" id="accordion">
+                                              <!-- start single accordion -->
+                                              {% for location in site.data.faq.location %}
+                                              {% if site.data.faq.location %}
+                                                <div class="panel single-accordion">
+                                                    <a href="#accordion-3{{forloop.index}}" data-parent="#accordion" data-toggle="collapse" class="accordion-head">{{location.question}}</a>
+                                                    <div class="collapse" id="accordion-3{{forloop.index}}">
+                                                        <div class="accordion-body fix">
+                                                            <p>{{location.answer | markdownify }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {%endif%}
+                                                {%endfor%}
+                                                <!-- End Single Accordion -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end accordion section -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</main>

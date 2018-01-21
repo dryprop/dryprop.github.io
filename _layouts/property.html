@@ -1,0 +1,92 @@
+{% include header.html %}
+    <main>
+      <section class="pri-pad">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12 col-sm-12 property-single left-block ">
+                      <div class="title mb-20">
+                          <h2 class="mb-0 lh-normal">{{ page.name }}</h2> <span>{{ page.location }}</span>
+                        {% if page.price %}  <span class="price primary-bg text-white">{{ page.price }}</span>{%endif%}
+                      </div>
+                      <!--title-->
+
+                      <!-- <div class="gallery-wrap thumb-gallery mb-40">
+                          <ul class="gallery">
+                            {% for images in page.images %}
+                              <li><img data-src="{{site.url}}/assets/images/properties/{{ images.main }}/" alt="Property Feature" class="lazyload"></li>
+                            {%endfor%}
+                          </ul>
+                      </div> -->
+
+                      <div class="swiper-container swiper-gallery">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            {% for images in page.images %}
+                                <div class="swiper-slide">
+                                    <div class="swiper-button-prev"></div>
+                                    <img data-src="{{site.url}}/assets/images/properties/{{ images.main }}" class="swiper-lazy">
+                                    <div class="swiper-lazy-preloader"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+        <!--gallery wrap-->
+                    <div class="row mb-40">
+                            <div class="col-sm-4 left-block ppt-info">
+                                <div class="box border">
+                                    <div class="box-title">
+                                        <h6 class="mb-0 lh-normal">Property Information</h6></div>
+                                    <div class="detail info">
+                                        <ul>
+                                            {% if page.area %}<li>Area <span>{{page.area}}</span></li>{%endif%}
+                                            {% if page.bathrooms %}<li>Bathrooms <span>{{page.bathrooms}}</span> </li>{%endif%}
+                                            {% if page.bedrooms %}<li>Bedrooms <span>{{page.bedrooms}}</span> </li>{%endif%}
+                                            {% if page.floors %}<li>Floors <span>{{page.floors}}</span> </li>{%endif%}
+                                            {% if page.distance %}<li>Distance <span>{{page.distance}}</span></li>{%endif%}
+                                            {% if page.basement %}<li>Basement <span>{{page.basement}}</span> </li>{%endif%}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--property-desc-->
+
+                            <div class="col-sm-8 ppt-desc">
+                                <div class="box border content-wrap mb-0">
+                                    <h4 class="title mb-20">Property Description</h4>
+                                    {{page.description}}
+                                </div>
+                            </div>
+                            <!--property-desc-->
+                        </div>
+                        <!--property detail-->
+
+                        <div class="box border mb-40">
+                            <h4 class="title mb-20">All Properties Feature:</h4>
+                            <ul class="amenities">
+                              {% for amenity in page.amenities %}
+                                <li>{{ amenity }}</li>
+                              {% endfor %}
+                            </ul>
+                        </div>
+                        <!--aminities-->
+                      {% if page.video %}
+                      <div class="box border mb-40">
+                        <h4 class="title mb-20">Video Tour</h4>
+                          <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="{{page.video}}"></iframe>
+                          </div>
+                      </div>
+                      {% endif %}
+                    </div>
+
+                    <!--left block-->
+            </div>
+        </section>
+        <!--property wrap-->
+    </main>
+    <!--main-->
+
+{% include footer.html %}

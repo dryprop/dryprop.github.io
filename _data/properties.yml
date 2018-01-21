@@ -1,0 +1,43 @@
+# limit featured properties to 2 and sub-featured to 3
+- name: Property Name 1
+  location: Street Name
+  price: $750/mo
+  thumbnail: assets/images/properties/prop1.jpg
+  url: /properties/miamimanor/
+  featured: true
+  sub-featured: false
+
+- name: Property Name 2
+  location: Street Name
+  price: $1000/mo
+  thumbnail: assets/images/properties/prop2.jpg
+  featured: true
+  sub-featured: false
+
+- name: Property Name 3
+  location: Street Name
+  price: $850/mo
+  thumbnail: assets/images/properties/maumee3.jpg
+  featured: false
+  sub-featured: true
+
+- name: Property Name 4
+  location: Street Name
+  price: $750/mo
+  thumbnail: assets/images/properties/toledo4.jpg
+  featured: false
+  sub-featured: true
+
+- name: Property Name 5
+  location: Street Name
+  price: $750/mo
+  thumbnail: assets/images/properties/toledo2.jpg
+  featured: false
+  sub-featured: true
+
+- name: Property Name 6
+  location: Street Name
+  price: $750/mo
+  thumbnail: assets/images/properties/toledo1.jpg
+  featured: false
+  sub-featured: false

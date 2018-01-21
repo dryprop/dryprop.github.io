@@ -1,0 +1,195 @@
+---
+layout: homepage
+title: Dryfuse Campus Properties
+description: We have been providing quality housing at an affordable price in the UT Main Campus and UTMC areas since 2000.  Our property portfolio ranges from townhouses to duplexes to single family homes.
+active:
+exclude:
+---
+
+    <div class="banner overlay">
+        <div class="banner-content">
+            <div class="wrap">
+                <div class="inner text-white main-title">
+                    <h1 class="lh-normal mb-10 text-white text-center">
+                        Dryfuse Campus Properties
+                    </h1>
+                    <h4 class="text-white text-center">University of Toledo Off-Campus Housing</h4>
+                    <hr>
+                    <h6 class="text-white text-center">Properties Available close to Main Campus and UTMC</h6>
+                </div>
+            </div>
+        </div>
+        <!--banner content-->
+
+        <!-- <ul class="banner-slide">
+            <li><figure><img data-lazy="assets/images/slider11.jpg" alt="" ></figure></li>
+        </ul> -->
+    </div>
+    <!--banner-->
+
+    <main class="pri-pad pb-0">
+        <section class="featured-block pri-pad-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="main-title text-center gold">
+                            <h2>Housing Options to Suit Your Needs</h2>
+                            <p>
+                                Dryfuse Campus Properties has a portfolio of houses, condos, and duplexes, in both the UT Main and UTMC areas. Leases range from 9-12 months and feature a variety of student and military discounts. For a full list of amenities and property information, click on a property below.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--title-->
+                <!-- Featured Properties Large (2x2) -->
+                <div class="row">
+                  {% for property in site.properties %}
+                    {% if property.featured == true  %}
+                      <div class="col-md-6 col-sm-6">
+                          <div class="featured-wrap mb-30">
+                              <a href="{{site.baseurl}}{{ property.url }}" class="link-overlay"></a>
+                              <span class="tag right text-uppercase bg-notice">featured</span>
+
+                              <div class="content-wrap mb-0 text-white">
+                                  <div class="title-wrap">
+                                      <h4 class="mb-0 text-white">{{ property.name }}</h4>
+                                      <span>{{ property.location }}</span>
+                                  </div>
+                                  <div class="price-tag price">
+                                      {{ property.price }}
+                                  </div>
+                              </div>
+
+                              <figure class="image-effect overlay">
+                                  <img src="assets/images/properties/{{ property.previmg }}" alt="">
+                              </figure>
+                              <!--fig-->
+                          </div>
+                      </div>
+                    {% endif %}
+                    {% endfor %}
+                  </div>
+                    <!--Sub featured-->
+                </div>
+                <!--featred property wrap-->
+            </div>
+        </section>
+        <!--featured property-->
+
+        <section class="service-block primary-bg pri-pad text-white">
+            <div class="col-md-5 col-sm-5 p-0 image-wrap">
+                <img src="assets/images/faq2.png" alt="">
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-sm-7 pull-right right-block">
+                        <div class="main-title text-center full text-white gold">
+                            <h2>Frequently Asked Questions</h2>
+                            <p>
+                                Below are answers to some of our most frequently asked questions. To see a complete list, visit our <a href="{{ site.url }}/faq" class="text-light">FAQ</a> page.
+                            </p>
+                        </div>
+                        <!--title-->
+
+                        <ul class="service-list">
+                            <li>
+                                <span class="icon"><i class="fa fa-lightbulb-o fa-5x" aria-hidden="true"></i></span>
+                                <h4 class="text-gold">Utilities </h4>
+                                <p>Tenants are required to pay for the gas and electricity utilities for the duration of their lease. These must be put in the tenants name <em>prior</em> to their move-in date.</p>
+                            </li>
+                            <!--single service-->
+
+                            <li>
+                                <span class="icon"><i class="fa fa-usd fa-5x" aria-hidden="true"></i></span>
+                                <h4 class="text-gold">Deposits</h4>
+                                <p>Security deposits are <strong>one month's rent</strong> and are generally returned within 30 days after move-out.</p>
+                            </li>
+                            <!--single service-->
+
+                            <li>
+                                <span class="icon"><i class="fa fa-lock fa-5x" aria-hidden="true"></i></span>
+                                <h4 class="text-gold">Security</h4>
+                                <p>All of our units now include built-in security system.</p>
+                            </li>
+                            <!--single service-->
+
+                            <li>
+                                <span class="icon"><i class="fa fa-map-marker fa-5x" aria-hidden="true"></i></span>
+                                <h4 class="text-gold">Location</h4>
+                                <p>All units are within walking distance from campus. Throw away that $90 parking pass!</p>
+                            </li>
+                            <!--single service-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--service block-->
+
+        <section class="agent-block sec-pad">
+            <div class="container">
+                <div class="row mb-45">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="main-title text-center gold">
+                            <h2>About Us</h2>
+                            <p>
+                                We have been providing quality housing at an affordable price in the UT Main Campus and UTMC areas since 2000.  Our property portfolio ranges from townhouses to duplexes to single family homes.  All of our homes have been recently updated with paint and appliances and feature amenities such as alarm systems, 24/7 on-call maintenance, weekly lawn care, and garages and off-street parking.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--title-->
+            </div>
+        </section>
+        <!--agent-->
+      {% if site.data.testimonials.person %}
+        <section class="testimonial sec-pad-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="main-title text-center gold">
+                            <h2>What our customers say?</h2>
+                        </div>
+                    </div>
+                    <!--title-->
+                    <div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2 text-center">
+                    
+                    <div class="swiper-container testimonial-container">
+                    <div class="swiper-wrapper">
+
+                    {% for person in site.data.testimonials.person %}
+                    <div class="swiper-slide swiper-testimonial">
+                    <div class="testimonial-thumb">
+                        <a data-slide-index="0" href=""><img src="{{person.img}}" alt=""/></a>
+                    </div>
+
+                    <ul class="testi">
+                        <li>
+                            <div class="content-wrap mb-40">
+                                <p>
+                                {{person.description}}
+                                </p>
+                            </div>
+
+                            <div class="author lh-normal">
+                                <h6 class="lh-normal mb-5">{{person.name}}</h6>
+                                <small>{{person.major}}</small>
+                            </div>
+                        </li>
+                    </ul>   
+                    </div>               
+                    {%endfor%}  
+                </div>
+                <div class="swiper-button-next translate-up"></div>
+                <div class="swiper-button-prev translate-up"></div>
+                </div>
+
+                    <!--testimonial slide-->
+                </div>
+            </div>
+        </section>
+        {%endif%}
+        <!--testimonial-->
+    </main>
+    <!--main-->
