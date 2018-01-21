@@ -1841,6 +1841,10 @@ p:last-of-type,
     padding-bottom: 50px;
 }
 
+.sec-pad-t {
+    padding-top: 50px;
+}
+
 .p-0 {
     padding: 0;
 }
@@ -2390,7 +2394,6 @@ main {
     top: 10px;
     max-width: 60px;
 }
-
 
 /*-------------- Near by property ------------*/
 
@@ -4343,12 +4346,4 @@ ul.gallery-full img {
 
 .translate-up {
     transform: translateY(-50px);
-}
-
-.fb-bg {
-    background: #002569; /* Old browsers */
-background: -moz-linear-gradient(45deg, #002569 0%, #ffce00 87%, #ffce00 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(45deg, #002569 0%,#ffce00 87%,#ffce00 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(45deg, #002569 0%,#ffce00 87%,#ffce00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002569', endColorstr='#ffce00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }

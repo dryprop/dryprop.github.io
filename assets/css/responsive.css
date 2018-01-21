@@ -368,9 +368,9 @@
 
     .pri-pad{ padding: 50px 0;}
     .pri-pad-b { padding-bottom: 50px;}
-    .sec-pad { padding: 25px 0;}
+    .sec-pad { padding: 50px 0;}
     .sec-pad-b,
-    .contact-block .top.pri-pad-b { padding-bottom: 25px; }
+    .contact-block .top.pri-pad-b { padding-bottom: 50px; }
 
     .pb-0,
     .near-by-property.wrap2{ padding-bottom: 0px; }
@@ -740,3 +740,13 @@
 
 
 @media (max-width: 330px) {}
+
+@media screen and (max-width: 400px){
+    .service-list li {
+        margin-bottom: 75px;
+    }
+
+    li>span.icon>i {
+        font-size: 3em;
+    }
+}
