@@ -84,7 +84,9 @@ $(document).ready(function () {
       direction: 'horizontal',
       loop: true,
       preloadImages: false,
-      lazy: true,
+      lazy: {
+          loadPrevNext: true
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
